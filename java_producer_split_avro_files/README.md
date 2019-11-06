@@ -72,6 +72,36 @@ Testing this StackOverflow [answer](https://stackoverflow.com/a/22225224)
 }
 ```
 
+Maven POM looks like
+
+```xml
+<plugin>
+	<groupId>org.apache.avro</groupId>
+	<artifactId>avro-maven-plugin</artifactId>
+	<version>${avro.version}</version>
+	<executions>
+		<execution>
+			<phase>generate-sources</phase>
+			<goals>
+				<goal>schema</goal>
+			</goals>
+			<configuration>
+				<sourceDirectory>${project.basedir}/src/main/resources/avro</sourceDirectory>
+				<stringType>String</stringType>
+				<createSetters>false</createSetters>
+				<enableDecimalLogicalType>true</enableDecimalLogicalType>
+				<fieldVisibility>private</fieldVisibility>
+				<imports>
+							<import>${project.basedir}/src/main/resources/avro/user_action.avro</import>
+							<import>${project.basedir}/src/main/resources/avro/search_result_type.avro</import>
+							<import>${project.basedir}/src/main/resources/avro/search_result.avro</import>
+				</imports>
+			</configuration>
+		</execution>
+	</executions>
+</plugin>
+```
+
 SearchResult records are created with
 
 ```java
