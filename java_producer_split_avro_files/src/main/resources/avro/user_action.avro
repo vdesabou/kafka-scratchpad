@@ -1,0 +1,11 @@
+{
+    "namespace": "com.github.vdesabou",
+    "type": "enum",
+    "name": "UserAction",
+	"version": "1",
+    "symbols": [
+        "S",
+        "V",
+        "C"
+    ]
+}

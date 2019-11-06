@@ -1,0 +1,28 @@
+{
+    "namespace": "com.github.vdesabou",
+    "type": "record",
+    "name": "SearchResult",
+    "version": "1",
+    "fields": [
+        {
+            "name": "type",
+            "type": "SearchResultType"
+        },
+        {
+            "name": "keyWord",
+            "type": "string"
+        },
+        {
+            "name": "searchEngine",
+            "type": "string"
+        },
+        {
+            "name": "position",
+            "type": "int"
+        },
+        {
+            "name": "userAction",
+            "type": "UserAction"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "namespace": "com.github.vdesabou",
+    "type": "enum",
+    "name": "SearchResultType",
+	"version": "1",
+    "symbols": [
+        "O",
+        "S",
+        "A"
+    ]
+}
